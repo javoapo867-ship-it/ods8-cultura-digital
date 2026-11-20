@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué tan fácil es conseguir el primer empleo? | Equipo 1</title>
+    
+    <!-- Metadatos SEO y Accesibilidad -->
+    <meta name="description" content="Análisis sobre la digitalización del mercado laboral juvenil en América Latina, la Meta ODS 8.6 y estrategias prácticas para conseguir el primer empleo.">
+    <meta name="author" content="Equipo 1: José Carlos Mejía Salgado, Cristian Daniel Lucas González, Ulises Limón Rodríguez, Javier Alejandro Apodaca Cuevas">
+
+    <!-- Etiquetas Open Graph (Para compartir el link en WhatsApp, Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="¿Qué tan fácil es conseguir el primer empleo?">
+    <meta property="og:description" content="Análisis sobre la digitalización del mercado laboral juvenil en América Latina, los Objetivos de Desarrollo Sostenible (Meta ODS 8.6) y la inserción profesional.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:locale" content="es_LA">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="¿Qué tan fácil es conseguir el primer empleo?">
+    <meta name="twitter:description" content="Un análisis sobre la digitalización del mercado laboral juvenil en América Latina y la Meta ODS 8.6.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        /* Mejoras de enfoque para navegación con teclado (Accesibilidad) */
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid #f59e0b;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Enlace de salto para lectores de pantalla y teclado (Accesibilidad WCAG) -->
+    <a href="#contenido-principal" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-blue-700 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold focus:shadow-lg">
+        Saltar al contenido principal
+    </a>
+
+    <!-- Navegación -->
+    <nav aria-label="Navegación principal" class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="flex items-center space-x-2" aria-label="Inicio EmpleoGuía">
+                    <span class="bg-blue-600 text-white p-2 rounded-lg font-bold text-lg" aria-hidden="true">1er</span>
+                    <span class="font-bold text-xl text-slate-900">EmpleoGuía</span>
+                </a>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-700">
+                    <a href="#investigacion" class="hover:text-blue-700 transition">Investigación y ODS 8</a>
+                    <a href="#conceptos" class="hover:text-blue-700 transition">Conceptos</a>
+                    <a href="#resultados" class="hover:text-blue-700 transition">Respuesta y Hallazgos</a>
+                    <a href="#conclusion" class="hover:text-blue-700 transition">Conclusión</a>
+                    <a href="#fuentes" class="hover:text-blue-700 transition">Fuentes</a>
+                    <a href="#relevancia" class="hover:text-blue-700 transition">¿Por qué investigar?</a>
+                </div>
+
+                <!-- Botón Menú Móvil Accesible -->
+                <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition">
+                    <span class="sr-only">Abrir menú de navegación</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 text-sm font-medium text-slate-700">
+            <a href="#investigacion" class="block py-2 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-700">Investigación y ODS 8</a>
+            <a href="#conceptos" class="block py-2 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-700">Conceptos</a>
+            <a href="#resultados" class="block py-2 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-700">Respuesta y Hallazgos</a>
+            <a href="#conclusion" class="block py-2 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-700">Conclusión</a>
+            <a href="#fuentes" class="block py-2 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-700">Fuentes</a>
+            <a href="#relevancia" class="block py-2 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-700">¿Por qué investigar?</a>
+        </div>
+    </nav>
+
+    <!-- Sección Hero (Título Principal e Integrantes) -->
+    <header class="gradient-bg text-white py-16 lg:py-24">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+            <span class="inline-block py-1 px-4 rounded-full bg-blue-900/50 border border-blue-300/40 text-white text-sm font-semibold mb-6">
+                Proyecto de Investigación • Equipo 1
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                ¿Qué tan fácil es conseguir el primer empleo?
+            </h1>
+            <p class="text-lg sm:text-xl text-blue-50 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Un análisis sobre la digitalización del mercado laboral juvenil en América Latina, los objetivos de desarrollo sostenible y estrategias prácticas para la inserción profesional.
+            </p>
+
+            <!-- Tarjeta de Integrantes del Equipo 1 -->
+            <div class="bg-blue-950/60 backdrop-blur-sm border border-blue-300/30 rounded-2xl p-5 max-w-3xl mx-auto mb-10">
+                <h2 class="text-xs uppercase tracking-widest text-blue-200 font-bold mb-3">Integrantes del Equipo 1</h2>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm sm:text-base font-medium text-white list-none">
+                    <li class="bg-blue-900/60 py-2 px-3 rounded-lg">• José Carlos Mejía Salgado</li>
+                    <li class="bg-blue-900/60 py-2 px-3 rounded-lg">• Cristian Daniel Lucas González</li>
+                    <li class="bg-blue-900/60 py-2 px-3 rounded-lg">• Ulises Limón Rodríguez</li>
+                    <li class="bg-blue-900/60 py-2 px-3 rounded-lg">• Javier Alejandro Apodaca Cuevas</li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#investigacion" class="bg-white text-blue-950 font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-blue-50 transition transform hover:-translate-y-0.5">
+                    Ver Marco de Investigación
+                </a>
+                <a href="#relevancia" class="bg-blue-900/70 border border-blue-300/50 text-white font-semibold px-8 py-4 rounded-xl hover:bg-blue-900 transition">
+                    ¿Por qué investigar este tema?
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="contenido-principal">
+        <!-- Sección Nueva: Pregunta de Investigación y Meta ODS 8.6 -->
+        <section id="investigacion" aria-labelledby="titulo-investigacion" class="py-16 max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Pregunta de Investigación -->
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-center">
+                    <div class="inline-flex items-center space-x-2 text-blue-700 font-bold text-sm uppercase tracking-wider mb-3">
+                        <span class="w-2.5 h-2.5 rounded-full bg-blue-700" aria-hidden="true"></span>
+                        <span>Pregunta de Investigación</span>
+                    </div>
+                    <h2 id="titulo-investigacion" class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug mb-4">
+                        “¿Cómo ha influido la digitalización del mercado laboral en la tasa de jóvenes NINI en América Latina durante la última década?”
+                    </h2>
+                    <p class="text-slate-700 text-base leading-relaxed">
+                        Esta interrogante guía nuestro análisis sobre cómo las nuevas plataformas digitales, el trabajo remoto y la automatización han creado tanto oportunidades como brechas de acceso para la juventud latinoamericana.
+                    </p>
+                </div>
+
+                <!-- Meta ODS 8.6 -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-rose-800 to-red-950 text-white p-8 sm:p-10 rounded-3xl shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-white/20 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                                Agenda 2030 • ONU
+                            </span>
+                            <span class="text-3xl font-black opacity-95">ODS 8</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-rose-100">Trabajo Decente y Crecimiento Económico</h3>
+                        <div class="bg-black/30 p-5 rounded-2xl border border-white/20">
+                            <span class="block text-sm font-extrabold text-rose-200 uppercase tracking-wide mb-1">Meta 8.6</span>
+                            <p class="text-base sm:text-lg font-medium leading-relaxed text-white">
+                                Busca reducir de forma considerable la proporción de jóvenes que no trabajan, no estudian ni reciben capacitación.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-rose-100 mt-6">
+                        Indicador clave para medir la efectividad de las políticas públicas y educativas en la integración juvenil.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Nueva: Conceptos Clave -->
+        <section id="conceptos" aria-labelledby="titulo-conceptos" class="py-16 bg-slate-900 text-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-blue-300 font-bold text-sm uppercase tracking-wider">Marco Conceptual</span>
+                    <h2 id="titulo-conceptos" class="text-3xl sm:text-4xl font-bold mt-2 mb-4">Conceptos y Palabras Clave del Estudio</h2>
+                    <p class="text-slate-300 mb-6">Definiciones fundamentales y ejes temáticos para comprender la dinámica del primer empleo y los desafíos de la juventud actual.</p>
+                    
+                    <!-- Palabras Clave -->
+                    <div class="flex flex-wrap justify-center items-center gap-2.5">
+                        <span class="text-xs uppercase tracking-wider text-slate-300 font-semibold mr-1">Palabras clave:</span>
+                        <span class="bg-blue-500/25 border border-blue-300/40 text-blue-100 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium">
+                            # Desempleo de los jóvenes
+                        </span>
+                        <span class="bg-emerald-500/25 border border-emerald-300/40 text-emerald-100 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium">
+                            # Desigualdad cultural
+                        </span>
+                        <span class="bg-indigo-500/25 border border-indigo-300/40 text-indigo-100 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium">
+                            # Transformación digital
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Concepto 1: Nini -->
+                    <article class="bg-slate-800/90 border border-slate-700 p-8 rounded-2xl hover:border-blue-400 transition">
+                        <div class="w-12 h-12 bg-blue-600/30 text-blue-300 rounded-xl flex items-center justify-center font-extrabold text-xl mb-5" aria-hidden="true">
+                            01
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Nini</h3>
+                        <p class="text-slate-200 text-sm leading-relaxed">
+                            Acrónimo utilizado para describir a la población joven que <strong>ni estudia, ni trabaja, ni recibe capacitación</strong> formal. Representa un grupo vulnerable frente a la exclusión económica y requiere políticas de reintegración educativa y laboral.
+                        </p>
+                    </article>
+
+                    <!-- Concepto 2: Inclusión laboral -->
+                    <article class="bg-slate-800/90 border border-slate-700 p-8 rounded-2xl hover:border-emerald-400 transition">
+                        <div class="w-12 h-12 bg-emerald-600/30 text-emerald-300 rounded-xl flex items-center justify-center font-extrabold text-xl mb-5" aria-hidden="true">
+                            02
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Inclusión laboral</h3>
+                        <p class="text-slate-200 text-sm leading-relaxed">
+                            Proceso mediante el cual se garantiza el acceso equitativo a empleos dignos, formales y bien remunerados para todos los sectores de la sociedad, eliminando barreras socioeconómicas, de género, discapacidad o falta de experiencia previa.
+                        </p>
+                    </article>
+
+                    <!-- Concepto 3: Transición de la escuela al trabajo -->
+                    <article class="bg-slate-800/90 border border-slate-700 p-8 rounded-2xl hover:border-indigo-400 transition">
+                        <div class="w-12 h-12 bg-indigo-600/30 text-indigo-300 rounded-xl flex items-center justify-center font-extrabold text-xl mb-5" aria-hidden="true">
+                            03
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Transición de la escuela al trabajo</h3>
+                        <p class="text-slate-200 text-sm leading-relaxed">
+                            Etapa crítica en la vida de los jóvenes que abarca desde la finalización de sus estudios hasta la obtención de su primer empleo estable y decente, influenciada por la pertinencia educativa, redes de apoyo y demanda del mercado.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Nueva: Respuesta a la Pregunta de Investigación y Principales Hallazgos -->
+        <section id="resultados" aria-labelledby="titulo-resultados" class="py-16 sm:py-20 bg-white border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                
+                <!-- Bloque: Respuesta a la Pregunta de Investigación -->
+                <div class="bg-amber-50 border-l-4 border-amber-600 rounded-r-3xl p-8 sm:p-10 shadow-sm mb-16">
+                    <div class="flex items-center space-x-2 text-amber-900 font-bold text-xs sm:text-sm uppercase tracking-wider mb-3">
+                        <span class="bg-amber-200 px-2.5 py-1 rounded-md">Análisis de Evidencia</span>
+                        <span aria-hidden="true">•</span>
+                        <span>Respuesta a la Pregunta de Investigación</span>
+                    </div>
+                    <h2 id="titulo-resultados" class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-5">
+                        Cautela metodológica: La digitalización frente a las desigualdades estructurales
+                    </h2>
+                    <div class="space-y-4 text-slate-800 text-base sm:text-lg leading-relaxed">
+                        <p>
+                            Con las fuentes consultadas y validadas, <strong>no es posible afirmar si la digitalización del mercado laboral aumentó o redujo la tasa de jóvenes nini en América Latina durante la última década</strong>. Ninguno de los tres estudios revisados mide directamente la digitalización ni compara la tasa nini antes y después de su expansión (Kiss et al., 2022; Liu et al., 2023).
+                        </p>
+                        <p>
+                            Lo que la evidencia sí permite sostener es que la condición nini se asocia con <strong>desigualdades estructurales</strong>, como el género, el origen socioeconómico, la formación familiar temprana y la desigualdad económica (Kiss et al., 2022; Liu et al., 2023). Por ello, la respuesta a la pregunta debe plantearse con cautela: la digitalización sería un factor adicional que habría que estudiar sobre estas desigualdades, y no una explicación que pueda establecerse con las fuentes actuales.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bloque: Principales Hallazgos -->
+                <div>
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <span class="text-blue-700 font-bold text-sm uppercase tracking-wider">Revisión de Literatura</span>
+                        <h3 class="text-3xl font-bold text-slate-900 mt-2 mb-3">Principales Hallazgos</h3>
+                        <p class="text-slate-700">Evidencia empírica obtenida de estudios demográficos y socioeconómicos sobre la juventud.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <!-- Hallazgo 1 -->
+                        <article class="bg-slate-50 border border-slate-200 rounded-2xl p-7 flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="bg-blue-700 text-white text-xs font-bold px-3 py-1 rounded-full">Hallazgo 1</span>
+                                    <span class="text-xs font-semibold text-slate-600">12 Países • América Latina</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-slate-900 mb-3">Género, clase social y formación familiar</h4>
+                                <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                                    Liu et al. (2023) analizaron a mujeres y hombres de 20 a 25 años en 12 países de América Latina con datos censales armonizados de IPUMS-International, con una muestra aproximada de <strong>4.4 millones de personas</strong>. Encontraron que el género y la clase social se combinan en el riesgo de desvinculación institucional: las mujeres de menor origen socioeconómico que forman pareja y tienen hijos a edades tempranas enfrentan mayor riesgo.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-slate-200 text-xs font-semibold text-blue-900">
+                                Fuente: Liu et al. (2023)
+                            </div>
+                        </article>
+
+                        <!-- Hallazgo 2 -->
+                        <article class="bg-slate-50 border border-slate-200 rounded-2xl p-7 flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="bg-indigo-700 text-white text-xs font-bold px-3 py-1 rounded-full">Hallazgo 2</span>
+                                    <span class="text-xs font-semibold text-slate-600">26 Estados • Brasil</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-slate-900 mb-3">Desigualdad económica y contexto estructural</h4>
+                                <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                                    Kiss et al. (2022) compararon la proporción de jóvenes nini en los 26 estados de Brasil con indicadores socioeconómicos. Entre los jóvenes de 18 a 24 años encontraron una asociación significativa entre esta condición, la desigualdad económica y los homicidios juveniles, y concluyen que el problema requiere políticas públicas que atiendan desigualdades estructurales y no solo decisiones individuales. En la sección de discusión abordan tendencias del mercado laboral y automatización (p. 1400), aunque sin medir la digitalización.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-slate-200 text-xs font-semibold text-indigo-900">
+                                Fuente: Kiss et al. (2022)
+                            </div>
+                        </article>
+
+                        <!-- Hallazgo 3 -->
+                        <article class="bg-slate-50 border border-slate-200 rounded-2xl p-7 flex flex-col justify-between hover:shadow-md transition">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="bg-emerald-700 text-white text-xs font-bold px-3 py-1 rounded-full">Hallazgo 3</span>
+                                    <span class="text-xs font-semibold text-slate-600">Análisis Cualitativo • España</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-slate-900 mb-3">Heterogeneidad detrás de la etiqueta «ni-ni»</h4>
+                                <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                                    García-Fuentes (2019), al analizar el caso español, muestra que la etiqueta «ni-ni» agrupa situaciones muy distintas y que <strong>no todos los jóvenes se encuentran en esa condición por decisión propia</strong>; por el contrario, las condiciones familiares, educativas y laborales influyen determinantemente en sus trayectorias de vida.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-slate-200 text-xs font-semibold text-emerald-900">
+                                Fuente: García-Fuentes (2019)
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Nueva: Conclusión Final -->
+        <section id="conclusion" aria-labelledby="titulo-conclusion" class="py-16 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 sm:p-12 shadow-xl">
+                    <div class="inline-block bg-blue-500/30 border border-blue-300/40 text-blue-100 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">
+                        Síntesis Académica
+                    </div>
+                    <h2 id="titulo-conclusion" class="text-2xl sm:text-3xl font-extrabold mb-6 text-white">
+                        Conclusión Final de la Investigación
+                    </h2>
+                    <div class="space-y-5 text-slate-100 text-base sm:text-lg leading-relaxed">
+                        <p>
+                            La evidencia revisada <strong>no permite concluir si la digitalización del mercado laboral ha aumentado o reducido la tasa de jóvenes nini en América Latina durante la última década</strong>, porque ningún estudio consultado mide directamente ese efecto. Sí permite afirmar que la condición nini se relaciona con desigualdades estructurales: el género y el origen socioeconómico en 12 países latinoamericanos (Liu et al., 2023), la desigualdad económica y la violencia en los estados de Brasil (Kiss et al., 2022) y la diversidad de situaciones que agrupa la etiqueta «ni-ni» (García-Fuentes, 2019).
+                        </p>
+                        <div class="bg-blue-950/70 border border-blue-300/30 rounded-2xl p-5 text-blue-50 text-base">
+                            <strong class="text-white block mb-1">Implicación y Área de Oportunidad:</strong>
+                            Cualquier explicación sobre el papel de la digitalización debería considerar estas desigualdades, y existe un claro vacío de investigación: faltan estudios que midan la digitalización y comparen la tasa nini a lo largo de la última década en la región. Ese vacío constituye la necesidad y el área de oportunidad que deja identificada esta investigación.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Nueva: Fuentes Consultadas -->
+        <section id="fuentes" aria-labelledby="titulo-fuentes" class="py-16 bg-slate-100 border-b border-slate-200">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-blue-700 font-bold text-sm uppercase tracking-wider">Referencias y Bibliografía</span>
+                    <h2 id="titulo-fuentes" class="text-3xl font-bold text-slate-900 mt-2 mb-3">Fuentes Consultadas en la Investigación</h2>
+                    <p class="text-slate-700 text-sm sm:text-base">Documentos institucionales, artículos académicos y reportes internacionales utilizados para el respaldo del estudio.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Fuente 1: CEPAL -->
+                    <a href="https://www.cepal.org/es/publicaciones/80995-estudio-prospectivo-empleo-juvenil-america-latina-la-educacion-la-formacion" target="_blank" rel="noopener noreferrer" aria-label="Consultar estudio de la CEPAL (se abre en una pestaña nueva)" class="block bg-white border border-slate-200 hover:border-blue-600 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition group">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div>
+                                <span class="inline-block bg-blue-100 text-blue-900 text-xs font-bold px-2.5 py-0.5 rounded-md mb-2">CEPAL</span>
+                                <h3 class="font-bold text-slate-900 group-hover:text-blue-700 transition text-base sm:text-lg">
+                                    Estudio prospectivo del empleo juvenil en América Latina: la educación y la formación
+                                </h3>
+                                <p class="text-xs text-slate-600 mt-1 break-all">https://www.cepal.org/es/publicaciones/80995-estudio-prospectivo-empleo-juvenil-america-latina-la-educacion-la-formacion</p>
+                            </div>
+                            <span class="shrink-0 inline-flex items-center text-sm font-semibold text-blue-700 group-hover:translate-x-1 transition">
+                                Consultar enlace &rarr;
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Fuente 2: OIT (Juventudes vulnerables) -->
+                    <a href="https://www.ilo.org/es/publications/juventudes-vulnerables-competencias-digitales-y-formacion-profesional-America-Latina" target="_blank" rel="noopener noreferrer" aria-label="Consultar publicación de la OIT sobre juventudes vulnerables (se abre en una pestaña nueva)" class="block bg-white border border-slate-200 hover:border-blue-600 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition group">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div>
+                                <span class="inline-block bg-indigo-100 text-indigo-900 text-xs font-bold px-2.5 py-0.5 rounded-md mb-2">OIT (ILO)</span>
+                                <h3 class="font-bold text-slate-900 group-hover:text-blue-700 transition text-base sm:text-lg">
+                                    Juventudes vulnerables, competencias digitales y formación profesional en América Latina
+                                </h3>
+                                <p class="text-xs text-slate-600 mt-1 break-all">https://www.ilo.org/es/publications/juventudes-vulnerables-competencias-digitales-y-formacion-profesional-America-Latina</p>
+                            </div>
+                            <span class="shrink-0 inline-flex items-center text-sm font-semibold text-blue-700 group-hover:translate-x-1 transition">
+                                Consultar enlace &rarr;
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Fuente 3: Artículo Académico (DOI) -->
+                    <a href="https://doi.org/10.32870/eera.vi57.1268" target="_blank" rel="noopener noreferrer" aria-label="Consultar artículo académico en Revista Espacios de Educación y Realidad Académica (se abre en una pestaña nueva)" class="block bg-white border border-slate-200 hover:border-blue-600 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition group">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div>
+                                <span class="inline-block bg-emerald-100 text-emerald-900 text-xs font-bold px-2.5 py-0.5 rounded-md mb-2">Publicación Académica • DOI</span>
+                                <h3 class="font-bold text-slate-900 group-hover:text-blue-700 transition text-base sm:text-lg">
+                                    Revista Espacios de Educación y Realidad Académica (DOI: 10.32870/eera.vi57.1268)
+                                </h3>
+                                <p class="text-xs text-slate-600 mt-1 break-all">https://doi.org/10.32870/eera.vi57.1268</p>
+                            </div>
+                            <span class="shrink-0 inline-flex items-center text-sm font-semibold text-blue-700 group-hover:translate-x-1 transition">
+                                Consultar enlace &rarr;
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Fuente 4: OIT (Empleo juvenil ante la IA) -->
+                    <a href="https://www.ilo.org/es/resource/articulo/empleo-juvenil-ante-la-ia-nuevos-desafios-para-una-transicion-al-trabajo" target="_blank" rel="noopener noreferrer" aria-label="Consultar artículo de la OIT sobre empleo juvenil ante la IA (se abre en una pestaña nueva)" class="block bg-white border border-slate-200 hover:border-blue-600 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition group">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div>
+                                <span class="inline-block bg-indigo-100 text-indigo-900 text-xs font-bold px-2.5 py-0.5 rounded-md mb-2">OIT (ILO)</span>
+                                <h3 class="font-bold text-slate-900 group-hover:text-blue-700 transition text-base sm:text-lg">
+                                    Empleo juvenil ante la IA: nuevos desafíos para una transición al trabajo
+                                </h3>
+                                <p class="text-xs text-slate-600 mt-1 break-all">https://www.ilo.org/es/resource/articulo/empleo-juvenil-ante-la-ia-nuevos-desafios-para-una-transicion-al-trabajo</p>
+                            </div>
+                            <span class="shrink-0 inline-flex items-center text-sm font-semibold text-blue-700 group-hover:translate-x-1 transition">
+                                Consultar enlace &rarr;
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Fuente 5: Banco Mundial -->
+                    <a href="https://blogs.worldbank.org/en/opendata/beyond-the-numbers--key-trends-reshaping-latin-american-jobs" target="_blank" rel="noopener noreferrer" aria-label="Consultar artículo del Banco Mundial (se abre en una pestaña nueva)" class="block bg-white border border-slate-200 hover:border-blue-600 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition group">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div>
+                                <span class="inline-block bg-amber-100 text-amber-900 text-xs font-bold px-2.5 py-0.5 rounded-md mb-2">World Bank Blogs</span>
+                                <h3 class="font-bold text-slate-900 group-hover:text-blue-700 transition text-base sm:text-lg">
+                                    Beyond the numbers: Key trends reshaping Latin American jobs
+                                </h3>
+                                <p class="text-xs text-slate-600 mt-1 break-all">https://blogs.worldbank.org/en/opendata/beyond-the-numbers--key-trends-reshaping-latin-american-jobs</p>
+                            </div>
+                            <span class="shrink-0 inline-flex items-center text-sm font-semibold text-blue-700 group-hover:translate-x-1 transition">
+                                Consultar enlace &rarr;
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 1: La Realidad -->
+        <section id="realidad" aria-labelledby="titulo-realidad" class="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 id="titulo-realidad" class="text-3xl font-bold text-slate-900 mb-4">La respuesta corta: Depende de tu estrategia</h2>
+                <p class="text-slate-700 text-lg">
+                    Conseguir el primer empleo rara vez es inmediato, pero tampoco es imposible. El mercado laboral actual valora tanto las habilidades blandas como la iniciativa por encima de un currículum extenso.
+                </p>
+            </div>
+
+            <!-- Estadísticas rápidas -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-center">
+                    <div class="text-4xl font-extrabold text-blue-700 mb-2">3 a 6</div>
+                    <div class="text-sm font-bold uppercase tracking-wider text-slate-600 mb-3">Meses promedio</div>
+                    <p class="text-slate-700 text-sm">Es el tiempo habitual que toma encontrar una primera oportunidad formal tras egresar o iniciar la búsqueda activa.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-center">
+                    <div class="text-4xl font-extrabold text-emerald-700 mb-2">70%</div>
+                    <div class="text-sm font-bold uppercase tracking-wider text-slate-600 mb-3">Mercado oculto</div>
+                    <p class="text-slate-700 text-sm">De las vacantes iniciales se cubren mediante contactos, recomendaciones, redes sociales o prácticas profesionales.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-center">
+                    <div class="text-4xl font-extrabold text-indigo-700 mb-2">85%</div>
+                    <div class="text-sm font-bold uppercase tracking-wider text-slate-600 mb-3">Actitud vs Aptitud</div>
+                    <p class="text-slate-700 text-sm">De los reclutadores priorizan las ganas de aprender, adaptabilidad y comunicación en puestos junior.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Principales Retos -->
+        <section id="retos" aria-labelledby="titulo-retos" class="py-16 bg-slate-100 border-y border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <h2 id="titulo-retos" class="text-3xl font-bold text-slate-900 mb-12 text-center">¿Por qué suele parecer difícil al principio?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex items-start space-x-4">
+                        <div class="bg-red-100 text-red-800 p-3 rounded-lg font-bold text-xl" aria-hidden="true">1</div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">La paradoja de la experiencia</h3>
+                            <p class="text-slate-700 text-sm">Muchas empresas piden "1 o 2 años de experiencia" para puestos de entrada. Esto suele ser un filtro ideal, no siempre un requisito estrictamente obligatorio.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex items-start space-x-4">
+                        <div class="bg-amber-100 text-amber-900 p-3 rounded-lg font-bold text-xl" aria-hidden="true">2</div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">Alta competencia en puestos básicos</h3>
+                            <p class="text-slate-700 text-sm">Al no requerir especialización avanzada, cientos de candidatos aplican a las mismas ofertas en portales de empleo tradicionales.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex items-start space-x-4">
+                        <div class="bg-purple-100 text-purple-900 p-3 rounded-lg font-bold text-xl" aria-hidden="true">3</div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">Falta de autoconocimiento profesional</h3>
+                            <p class="text-slate-700 text-sm">No saber cómo vender las habilidades adquiridas en la escuela, voluntariados o proyectos personales hace que el CV pase desapercibido.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex items-start space-x-4">
+                        <div class="bg-blue-100 text-blue-900 p-3 rounded-lg font-bold text-xl" aria-hidden="true">4</div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">Expectativas salariales vs. realidad</h3>
+                            <p class="text-slate-700 text-sm">El primer empleo rara vez ofrece el sueldo ideal; su verdadero valor radica en el aprendizaje y el impulso que le da a tu currículum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Nueva: ¿Por qué investigar este tema como joven? -->
+        <section id="relevancia" aria-labelledby="titulo-relevancia" class="py-16 sm:py-24 bg-gradient-to-br from-blue-900 via-indigo-950 to-slate-900 text-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="inline-block bg-blue-500/25 border border-blue-300/40 text-blue-100 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">
+                        Importancia Juvenil
+                    </span>
+                    <h2 id="titulo-relevancia" class="text-3xl sm:text-4xl font-extrabold mb-4">
+                        ¿Por qué debemos investigar este tema como jóvenes?
+                    </h2>
+                    <p class="text-blue-100 text-base sm:text-lg leading-relaxed">
+                        Analizar la relación entre la digitalización, las desigualdades estructurales y el primer empleo no es solo un ejercicio académico: es una herramienta fundamental para comprender nuestro propio futuro profesional y social.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Razón 1 -->
+                    <article class="bg-white/10 backdrop-blur-md border border-white/20 p-7 rounded-2xl">
+                        <div class="w-11 h-11 bg-blue-500/30 text-blue-100 rounded-xl flex items-center justify-center font-bold text-lg mb-4" aria-hidden="true">
+                            1
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Visión crítica ante la realidad</h3>
+                        <p class="text-slate-200 text-sm leading-relaxed">
+                            Nos permite dejar de ver el desempleo juvenil como un fracaso individual y entender que existen barreras económicas, culturales y de género que condicionan las oportunidades en América Latina.
+                        </p>
+                    </article>
+
+                    <!-- Razón 2 -->
+                    <article class="bg-white/10 backdrop-blur-md border border-white/20 p-7 rounded-2xl">
+                        <div class="w-11 h-11 bg-emerald-500/30 text-emerald-100 rounded-xl flex items-center justify-center font-bold text-lg mb-4" aria-hidden="true">
+                            2
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Adaptación al entorno digital</h3>
+                        <p class="text-slate-200 text-sm leading-relaxed">
+                            Comprender cómo evoluciona el mercado laboral frente a la transformación digital nos ayuda a identificar qué competencias debemos desarrollar para lograr una transición exitosa de la escuela al trabajo.
+                        </p>
+                    </article>
+
+                    <!-- Razón 3 -->
+                    <article class="bg-white/10 backdrop-blur-md border border-white/20 p-7 rounded-2xl">
+                        <div class="w-11 h-11 bg-amber-500/30 text-amber-100 rounded-xl flex items-center justify-center font-bold text-lg mb-4" aria-hidden="true">
+                            3
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Incidencia y participación activa</h3>
+                        <p class="text-slate-200 text-sm leading-relaxed">
+                            Como protagonistas de esta generación, investigar estos vacíos de información nos da voz y argumentos basados en evidencia para exigir políticas públicas y educativas más justas e inclusivas.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 py-12 text-center text-sm border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="mb-2 text-white font-bold text-base">¿Qué tan fácil es conseguir el primer empleo?</p>
+            <p class="text-slate-300 mb-4">Equipo 1: José Carlos Mejía Salgado • Cristian Daniel Lucas González • Ulises Limón Rodríguez • Javier Alejandro Apodaca Cuevas</p>
+            <p class="text-xs text-slate-400 mb-6">Proyecto enfocado en la Meta ODS 8.6 y la digitalización del mercado laboral en América Latina.</p>
+            
+            <!-- Botón para compartir enlace fácilmente -->
+            <div class="mb-8">
+                <button id="btn-compartir" type="button" class="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full shadow transition">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                    </svg>
+                    <span id="texto-compartir">Compartir enlace de esta página</span>
+                </button>
+                <p id="mensaje-copiado" role="status" aria-live="polite" class="text-emerald-400 text-xs font-medium mt-2 hidden">
+                    ¡Enlace copiado al portapapeles! Ya puedes pegarlo y compartirlo.
+                </p>
+            </div>
+
+            <!-- Licencia Creative Commons CC0 1.0 -->
+            <div class="pt-6 border-t border-slate-800 flex justify-center items-center">
+                <p class="inline-flex flex-wrap items-center justify-center text-xs text-slate-300">
+                    <a href="https://www.udlap.mx/web/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline mx-1">ODS8 cultura digital</a>
+                    <span>by</span>
+                    <a href="https://i.pinimg.com/1200x/80/fa/27/80fa27cc9f400afe11e8025f3d02cdf1.jpg" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline mx-1">Equipo 1</a>
+                    <span>is marked</span>
+                    <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline ml-1">CC0 1.0</a>
+                    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Ícono de Creative Commons" style="max-width: 1em; max-height: 1em; margin-left: .2em;" class="inline-block invert opacity-90">
+                    <img src="https://mirrors.creativecommons.org/presskit/icons/zero.svg" alt="Ícono de Dominio Público CC0" style="max-width: 1em; max-height: 1em; margin-left: .2em;" class="inline-block invert opacity-90">
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de accesibilidad (Menú móvil y botón de compartir) -->
+    <script>
+        // Menú móvil accesible
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+            menuBtn.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Botón compartir enlace (Web Share API + Fallback copiar al portapapeles)
+        const btnCompartir = document.getElementById('btn-compartir');
+        const mensajeCopiado = document.getElementById('mensaje-copiado');
+
+        btnCompartir.addEventListener('click', async () => {
+            const shareData = {
+                title: '¿Qué tan fácil es conseguir el primer empleo? | Equipo 1',
+                text: 'Revisa nuestra investigación sobre la digitalización del mercado laboral juvenil en América Latina y la Meta ODS 8.6.',
+                url: window.location.href
+            };
+
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                } catch (err) {
+                    // Usuario canceló o no soportado
+                }
+            } else {
+                try {
+                    await navigator.clipboard.writeText(window.location.href);
+                    mensajeCopiado.classList.remove('hidden');
+                    setTimeout(() => mensajeCopiado.classList.add('hidden'), 4000);
+                } catch (err) {
+                    alert('Copia el enlace desde la barra de direcciones de tu navegador: ' + window.location.href);
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
